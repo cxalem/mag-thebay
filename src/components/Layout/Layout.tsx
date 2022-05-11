@@ -9,7 +9,7 @@ type Props = {
 
 const Layout: React.FC<Props> = ({ children, title, description }) => {
   return (
-    <div>
+    <div className="h-full">
       <Head>
         <title>Mag-Thebay</title>
         <meta name="description" content="Construyendo un mundo sin límites" />

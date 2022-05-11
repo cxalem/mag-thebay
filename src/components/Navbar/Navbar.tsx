@@ -3,18 +3,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { Disclosure } from "@headlessui/react";
 import Button from "../Button/Button";
+import logo from "../../public/images/logo-magthebay-oscuro.png"
 
 type Props = {};
 
 const Navbar: React.FC<Props> = ({}) => {
   return (
-    <header className="">
+    <header className="py-5">
       <Disclosure as="nav">
         {({ open }) => (
           <>
             <div className="hidden md:flex items-center justify-between">
-              <div className="flex gap-4 items-center">
-                <Image src="/" alt="Mag-Thebay" width="100" height="100" />
+              <div className="flex gap-8 items-center">
+                <Image src={logo} alt="Mag-Thebay" width="255" height="60" />
                 <ul className="flex gap-5">
                   <li>
                     <Link href="#">
@@ -44,24 +45,24 @@ const Navbar: React.FC<Props> = ({}) => {
             </div>
 
             <div className="flex justify-between md:hidden">
-              <Image src="/" alt="Mag-Thebay" width="100" height="100" />
+                <Image src={logo} alt="Mag-Thebay" width="255" height="60" />
               <Disclosure.Button>{!open ? "Menu" : "Cerrar"}</Disclosure.Button>
             </div>
             <Disclosure.Panel className="flex flex-col md:hidden">
               <div className="flex flex-col">
                 <Disclosure.Button>
                   <Link href="#">
-                    <a>Inicio</a>
+                      <a className="text-primary font-semibold">Inicio</a>
                   </Link>
                 </Disclosure.Button>
                 <Disclosure.Button>
                   <Link href="#">
-                    <a>Nosotros</a>
+                      <a className="text-primary font-semibold">Nosotros</a>
                   </Link>
                 </Disclosure.Button>
                 <Disclosure.Button>
                   <Link href="#">
-                    <a>Proyectos</a>
+                      <a className="text-primary font-semibold">Proyectos</a>
                   </Link>
                 </Disclosure.Button>
               </div>
