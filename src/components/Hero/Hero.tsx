@@ -1,0 +1,61 @@
+import Link from "next/link";
+import Button from "../Button/Button";
+import Image from "next/image";
+import heroImg from "../../public/images/hero-placeholder.png";
+import acnur from "../../public/images/acnur-logo.svg";
+import oim from "../../public/images/oim.svg";
+import planInternacional from "../../public/images/plan-international.svg";
+import styles from "../../styles/Hero.module.css";
+
+type Props = {};
+
+const Hero: React.FC<Props> = ({}) => {
+  return (
+    <div className={`${styles.heroContainer} flex flex-col gap-10 relative mt-10`}>
+      <div
+        className={`flex flex-col gap-2 items-center px-10 py-16 lg:items-start ${styles.infoContainer} rounded-xl md:px-20 md:py-28 `}
+      >
+        <h1 className="text-white text-center text-5xl md:text-left lg:text-7xl font-black ">Mag-Thebay</h1>
+        <p className="text-white text-center md:text-left text-2xl">Construyendo un mundo sin limites</p>
+        <div className="grid grid-cols-1 gap-4 justify-items-center md:gap-0 md:grid-cols-2 w-max">
+          <Button type="inverted-secondary">Contáctanos</Button>
+          <Button type="inverted-primary">Sobre Nosotros</Button>
+        </div>
+      </div>
+      <div className={`${styles.heroImg}`}>
+        <Image
+          src={heroImg}
+          width={376}
+          height={476}
+          alt="Mag-Thebay"
+          className="rounded-lg"
+        />
+      </div>
+      <div className={`${styles.logoContainer} grid grid-cols-2 justify-items-center md:grid-cols-3 w-max`}>
+        <Image
+          src={acnur}
+          width={211}
+          height={50}
+          alt="Mag-Thebay"
+          className="rounded-lg"
+        />
+        <Image
+          src={oim}
+          width={132}
+          height={50}
+          alt="Mag-Thebay"
+          className="rounded-lg"
+        />
+        <Image
+          src={planInternacional}
+          width={176}
+          height={50}
+          alt="Mag-Thebay"
+          className="rounded-lg"
+        />
+      </div>
+    </div>
+  );
+};
+
+export default Hero;

@@ -1,0 +1,34 @@
+div.infoContainer {
+  background: radial-gradient(
+    52.39% 153.75% at 50% 50%,
+    rgba(0, 108, 189, 0.75) 0%,
+    #006cbd 100%
+  );
+}
+
+div.logoContainer {
+    margin-left: 4%;
+  }
+
+div.heroImg {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+@media screen and (max-width: 1264px) {
+  div.logoContainer {
+    margin-top: 130px;
+    width: 100%;
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 1076px) {
+  div.heroImg {
+    display: none;
+  }
+  div.logoContainer {
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+}
