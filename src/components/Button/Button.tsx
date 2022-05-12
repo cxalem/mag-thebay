@@ -6,16 +6,23 @@ type Props = {
   children: React.ReactNode;
 };
 
+type ButtonClassNames = {
+  primaryButton: string;
+  secondaryButton: string;
+  invertedPrimaryButton: string;
+  invertedSecondaryButton: string;
+}
+
 const Button: React.FC<Props> = ({ children, type, href }) => {
-  const classNames = {
+  const classNames: ButtonClassNames = {
     primaryButton:
-      "text-white font-semibold border-2 border-blue-600 bg-blue-600 py-2 px-9 rounded-full hover:shadow-lg ease-in-out duration-150",
+      "text-white font-medium border-2 border-blue-600 bg-blue-600 py-2 px-9 rounded-full hover:shadow-lg ease-in-out duration-150",
     secondaryButton:
-      "text-blue-600 font-semibold border-2 border-blue-600 py-2 px-9 rounded-full hover:shadow-lg ease-in-out duration-150",
+      "text-blue-600 font-medium border-2 border-blue-600 py-2 px-9 rounded-full hover:shadow-lg ease-in-out duration-150",
     invertedPrimaryButton:
-      "text-blue-600 font-semibold border-2 border-transparent bg-white py-2 px-9 rounded-full hover:shadow-lg ease-in-out duration-150",
+      "text-blue-600 font-medium border-2 border-transparent bg-white py-2 px-9 rounded-full hover:shadow-lg ease-in-out duration-150",
     invertedSecondaryButton:
-      "text-white font-semibold border-2 border-white py-2 px-9 rounded-full hover:shadow-lg ease-in-out duration-150",
+      "text-white font-medium border-2 border-white py-2 px-9 rounded-full hover:shadow-lg ease-in-out duration-150",
   };
 
   return (
