@@ -1,19 +1,20 @@
 import Link from "next/link";
 
 type Props = {
+  children: React.ReactNode;
   type: "primary" | "secondary" | "inverted-primary" | "inverted-secondary";
   href?: string;
-  children: React.ReactNode;
+  onClick?: () => void;
 };
 
-type ButtonClassNames = {
+interface ButtonClassNames {
   primaryButton: string;
   secondaryButton: string;
   invertedPrimaryButton: string;
   invertedSecondaryButton: string;
-}
+};
 
-const Button: React.FC<Props> = ({ children, type, href }) => {
+const Button: React.FC<Props> = ({ children, type, href, onClick }) => {
   const classNames: ButtonClassNames = {
     primaryButton:
       "text-white font-medium border-2 border-blue-600 bg-blue-600 py-2 px-9 rounded-full hover:shadow-lg ease-in-out duration-150",
@@ -26,8 +27,27 @@ const Button: React.FC<Props> = ({ children, type, href }) => {
   };
 
   return (
-    <Link href={href ? `${href}` : ""}>
-      <a className="w-max">
+    <>
+      {href ? (
+        <Link href={href}>
+          <a className="w-max">
+            <button
+              className={
+                type === "primary"
+                  ? `${classNames.primaryButton}`
+                  : type === "secondary"
+                  ? `${classNames.secondaryButton}`
+                  : type === "inverted-primary"
+                  ? `${classNames.invertedPrimaryButton}`
+                  : type === "inverted-secondary" &&
+                    `${classNames.invertedSecondaryButton}`
+              }
+            >
+              {children}
+            </button>
+          </a>
+        </Link>
+      ) : (
         <button
           className={
             type === "primary"
@@ -39,11 +59,12 @@ const Button: React.FC<Props> = ({ children, type, href }) => {
               : type === "inverted-secondary" &&
                 `${classNames.invertedSecondaryButton}`
           }
+          onClick={onClick}
         >
           {children}
         </button>
-      </a>
-    </Link>
+      )}
+    </>
   );
 };
 
