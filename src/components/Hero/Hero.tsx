@@ -37,21 +37,18 @@ const Hero: React.FC<Props> = ({}) => {
           width={211}
           height={50}
           alt="Mag-Thebay"
-          className="rounded-lg"
         />
         <Image
           src={oim}
           width={132}
           height={50}
           alt="Mag-Thebay"
-          className="rounded-lg"
         />
         <Image
           src={planInternacional}
           width={176}
           height={50}
           alt="Mag-Thebay"
-          className="rounded-lg"
         />
       </div>
     </div>

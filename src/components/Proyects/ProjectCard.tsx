@@ -15,6 +15,7 @@ const ProjectCard: React.FC<Props> = ({ title, description, url }) => {
       <Image
         alt={title}
         src={url}
+        layout="responsive"
         width={300}
         height={100}
         className={style.cardHeader}
@@ -22,7 +23,9 @@ const ProjectCard: React.FC<Props> = ({ title, description, url }) => {
       <div className="flex flex-col gap-4 px-6 py-10 justify-center">
         <h2 className="text-center font-bold text-primary">{title}</h2>
         <p className="text-center text-primary text-sm opacity-70">{description}</p>
-        <Button href={url} type="primary">Más Info</Button>
+        <div className="flex justify-center">
+        <Button href={url} type="primary">Más Información</Button>
+        </div>
       </div>
     </div>
   );

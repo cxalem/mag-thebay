@@ -6,7 +6,7 @@ type Props = {};
 
 const InfoSection: React.FC<Props> = ({}) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-items-center md:my-32 md:px-28 ">
+    <div className="grid grid-cols-1 my-10 md:grid-cols-2 items-center justify-items-center md:my-32 md:px-28 ">
       <Image 
         src={aboutUsImage}
         width={283}
