@@ -11,7 +11,7 @@ type Props = {};
 
 const Hero: React.FC<Props> = ({}) => {
   return (
-    <div className={`${styles.heroContainer} flex flex-col gap-10 relative my-10`}>
+    <div className={`${styles.heroContainer} flex flex-col w-full max-w-7xl gap-10 relative my-10`}>
       <div
         className={`flex flex-col gap-2 items-center px-10 py-16 lg:items-start ${styles.infoContainer} rounded-xl md:px-20 md:py-28 `}
       >
