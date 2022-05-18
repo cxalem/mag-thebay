@@ -11,9 +11,9 @@ type Props = {};
 
 const Hero: React.FC<Props> = ({}) => {
   return (
-    <div className={`${styles.heroContainer} flex flex-col w-full max-w-7xl gap-10 relative my-10`}>
+    <div className={`${styles.heroContainer} flex flex-col w-full items-center lg:items-start max-w-7xl gap-10 relative my-10`}>
       <div
-        className={`flex flex-col gap-2 items-center px-10 py-16 lg:items-start ${styles.infoContainer} rounded-xl md:px-20 md:py-28 `}
+        className={`flex flex-col w-full gap-2 items-center px-10 py-16 lg:items-start ${styles.infoContainer} rounded-xl md:px-20 md:py-28 `}
       >
         <h1 className="text-white text-center text-5xl md:text-left lg:text-7xl font-black ">Mag-Thebay</h1>
         <p className="text-white text-center md:text-left text-2xl">Construyendo un mundo sin limites</p>
@@ -22,7 +22,7 @@ const Hero: React.FC<Props> = ({}) => {
           <Button type="inverted-primary">Sobre Nosotros</Button>
         </div>
       </div>
-      <div className={`${styles.heroImg}`}>
+      <div className={`${styles.heroImg} hidden lg:block `}>
         <Image
           src={heroImg}
           width={376}
@@ -31,7 +31,7 @@ const Hero: React.FC<Props> = ({}) => {
           className="rounded-lg"
         />
       </div>
-      <div className={`${styles.logoContainer} grid grid-cols-2 justify-items-center md:grid-cols-3 w-max`}>
+      <div className={`${styles.logoContainer} grid justify-items-center min-w-fit gap-6 md:gap-0 md:grid-rows-1 md:grid-cols-3`}>
         <Image
           src={acnur}
           width={211}

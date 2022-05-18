@@ -1,5 +1,6 @@
-import Navbar from "../Navbar/Navbar";
+import Navbar from "./Navbar";
 import Head from "next/head";
+import Footer from "./Footer";
 
 type Props = {
   description: string;
@@ -20,7 +21,7 @@ const Layout: React.FC<Props> = ({ children, title, description }) => {
 
       <main className="">{children}</main>
       
-      <footer> Footer </footer>
+      <footer> <Footer /> </footer>
     </div>
   );
 };

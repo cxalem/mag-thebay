@@ -17,13 +17,13 @@ interface ButtonClassNames {
 const Button: React.FC<Props> = ({ children, type, href, onClick }) => {
   const classNames: ButtonClassNames = {
     primaryButton:
-      "text-white font-medium border-2 border-blue-600 bg-blue-600 py-2 px-9 rounded-full hover:shadow-lg ease-in-out duration-150",
+      "text-white flex justify-center font-medium border-2 border-blue-600 bg-blue-600 py-2 px-9 rounded-full hover:shadow-lg ease-in-out duration-150",
     secondaryButton:
-      "text-blue-600 font-medium border-2 border-blue-600 py-2 px-9 rounded-full hover:shadow-lg ease-in-out duration-150",
+      "text-blue-600 flex justify-center font-medium border-2 border-blue-600 py-2 px-9 rounded-full hover:shadow-lg ease-in-out duration-150",
     invertedPrimaryButton:
-      "text-blue-600 font-medium border-2 border-transparent bg-white py-2 px-9 rounded-full hover:shadow-lg ease-in-out duration-150",
+      "text-blue-600 flex justify-center font-medium border-2 border-transparent bg-white py-2 px-9 rounded-full hover:shadow-lg ease-in-out duration-150",
     invertedSecondaryButton:
-      "text-white font-medium border-2 border-white py-2 px-9 rounded-full hover:shadow-lg ease-in-out duration-150",
+      "text-white flex justify-center font-medium border-2 border-white py-2 px-9 rounded-full hover:shadow-lg ease-in-out duration-150",
   };
 
   return (

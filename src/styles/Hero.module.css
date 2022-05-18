@@ -12,23 +12,49 @@ div.logoContainer {
 
 div.heroImg {
   position: absolute;
+  width: 408px;
+  height: 516px;
   top: 50px;
   right: 50px;
 }
 
 @media screen and (max-width: 1264px) {
+  div.heroImg {
+    width: 350px;
+    height: 422px;
+  }
   div.logoContainer {
-    margin-top: 130px;
-    width: 100%;
-    margin-left: 0px;
+    margin-left: 0;
   }
 }
-@media screen and (max-width: 1076px) {
+
+@media screen and (max-width: 1183px) {
+  div.logoContainer {
+    width: 550px;
+    height: 43.44px;
+  }
+}
+
+@media screen and (max-width: 1166px) {
   div.heroImg {
-    display: none;
+    right: 30px;
   }
   div.logoContainer {
-    margin-top: 0px;
-    margin-left: 0px;
+    width: 480px;
+    height: 37.91px;
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  div.heroImg {
+    width: 300px;
+    height: 379px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  div.logoContainer {
+    width: fit-content;
+    height: fit-content;
   }
 }
