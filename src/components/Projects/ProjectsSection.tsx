@@ -25,7 +25,7 @@ const getItems = () => {
 };
 
 const ProjectsSection: React.FC<Props> = ({}) => {
-  const projects = getItems();
+  const projects: Proyect[] = getItems();
 
   return (
     <div className="grid grid-cols-1 justify-items-center my-10 md:mb-32 md:grid-cols-2 lg:grid-cols-3 gap-10 md:px-20">
