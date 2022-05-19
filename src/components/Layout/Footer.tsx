@@ -16,7 +16,7 @@ const Footer = () => {
         </div>
         <div>
           <ul className="flex flex-col gap-2 justify-around h-full">
-            <Link href="/" passHref>
+            <Link href="/nosotros" passHref>
               <li className="text-center md:text-left">
                 <span className="text-primary opacity-90 text-xxs cursor-pointer">
                   Nosotros

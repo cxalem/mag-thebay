@@ -19,7 +19,7 @@ const InfoSection: React.FC<Props> = ({}) => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis laoreet
           mattis fermentum aliquam nunc parturient.
         </p>
-        <Button type="primary" href="/">
+        <Button type="primary" href="/nosotros">
           ¡Quiero saber más!
         </Button>
       </div>

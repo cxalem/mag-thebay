@@ -18,12 +18,12 @@ const Navbar: React.FC<Props> = ({}) => {
                 <Image src={logo} alt="Mag-Thebay" width="255" height="60" />
                 <ul className="flex gap-5">
                   <li>
-                    <Link href="#">
+                    <Link href="/">
                       <a className="text-primary font-semibold">Inicio</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="#">
+                    <Link href="/nosotros">
                       <a className="text-primary font-semibold">Nosotros</a>
                     </Link>
                   </li>
@@ -51,12 +51,12 @@ const Navbar: React.FC<Props> = ({}) => {
             <Disclosure.Panel className="flex flex-col md:hidden">
               <div className="flex flex-col">
                 <Disclosure.Button>
-                  <Link href="#">
+                  <Link href="/">
                       <a className="text-primary font-semibold">Inicio</a>
                   </Link>
                 </Disclosure.Button>
                 <Disclosure.Button>
-                  <Link href="#">
+                  <Link href="/nosotros">
                       <a className="text-primary font-semibold">Nosotros</a>
                   </Link>
                 </Disclosure.Button>
