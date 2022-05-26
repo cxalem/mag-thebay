@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.css";
 import aboutUsImage from "../public/images/about-us.jpg";
 import TextBox from "../components/TextBox/TextBox";
 import GoalsSection from "../components/GoalsSection/GoalSection";
+import { Carousel } from "../components/Carousel/Carousel";
 
 const Nosotros: NextPage = () => {
   return (
@@ -37,6 +38,7 @@ const Nosotros: NextPage = () => {
         </p>
       </TextBox>
       <GoalsSection />
+      <Carousel />
     </div>
   );
 };
