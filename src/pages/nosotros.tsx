@@ -2,8 +2,8 @@ import { NextPage } from "next";
 import InfoSection from "../components/InfoSection/InfoSection";
 import styles from "../styles/Home.module.css";
 import aboutUsImage from "../public/images/about-us.jpg";
-import Button from "../components/Button/Button";
 import TextBox from "../components/TextBox/TextBox";
+import GoalsSection from "../components/GoalsSection/GoalSection";
 
 const Nosotros: NextPage = () => {
   return (
@@ -36,6 +36,7 @@ const Nosotros: NextPage = () => {
           pleno de sus derechos humanos.
         </p>
       </TextBox>
+      <GoalsSection />
     </div>
   );
 };

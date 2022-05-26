@@ -15,11 +15,11 @@ const Hero: React.FC<Props> = ({}) => {
       <div
         className={`flex flex-col w-full gap-2 items-center px-10 py-16 lg:items-start ${styles.infoContainer} rounded-xl md:px-20 md:py-28 `}
       >
-        <h1 className="text-white text-center text-5xl md:text-left lg:text-7xl font-black ">Mag-Thebay</h1>
+        <h1 className="text-white text-center text-5xl md:text-left lg:text-7xl font-black">Mag-Thebay</h1>
         <p className="text-white text-center md:text-left text-2xl">Construyendo un mundo sin limites</p>
         <div className="grid grid-cols-1 gap-4 justify-items-center md:gap-0 md:grid-cols-2 w-max">
           <Button type="inverted-secondary">Contáctanos</Button>
-          <Button type="inverted-primary">Sobre Nosotros</Button>
+          <Button type="inverted-primary" href="/nosotros">Sobre Nosotros</Button>
         </div>
       </div>
       <div className={`${styles.heroImg} hidden lg:block `}>

@@ -1,0 +1,26 @@
+{
+  "goal-1": {
+    "title": "Estudio, Promoción y Acompañamiento",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  "goal-2": {
+    "title": "Cooperación y asesoramiento",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  "goal-3": {
+    "title": "Capacitación y formación",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  "goal-4": {
+    "title": "Detección de necesidades",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  "goal-5": {
+    "title": "Promover la inserción laboral de Migrantes",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  "goal-6": {
+    "title": "Difundir la problemática de la trata de personas",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  }
+}
