@@ -13,7 +13,7 @@ const Proyectos: NextPage = () => {
       <div>
         <InfoSection src={aboutUsImage} alt="About Us">
           <h3 className="text-5xl text-center md:text-left font-extrabold text-primary">
-            Qué es Mag-Thebay y qué hacemos
+            Proyectos en los que estamos trabajando
           </h3>
           <p className="text-primary text-center md:text-left opacity-70">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis
