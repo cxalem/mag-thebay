@@ -28,7 +28,7 @@ const Navbar: React.FC<Props> = ({}) => {
                     </Link>
                   </li>
                   <li>
-                    <Link href="#">
+                    <Link href="/proyectos">
                       <a className="text-primary font-semibold">Proyectos</a>
                     </Link>
                   </li>
@@ -61,7 +61,7 @@ const Navbar: React.FC<Props> = ({}) => {
                   </Link>
                 </Disclosure.Button>
                 <Disclosure.Button>
-                  <Link href="#">
+                  <Link href="/proyectos">
                       <a className="text-primary font-semibold">Proyectos</a>
                   </Link>
                 </Disclosure.Button>

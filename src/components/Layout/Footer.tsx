@@ -23,7 +23,7 @@ const Footer = () => {
                 </span>
               </li>
             </Link>
-            <Link href="/" passHref>
+            <Link href="/proyectos" passHref>
               <li className="text-center md:text-left">
                 <span className="text-primary opacity-90 text-xxs cursor-pointer">
                   Nuestro Proyectos
