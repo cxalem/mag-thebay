@@ -38,7 +38,37 @@ const Nosotros: NextPage = () => {
         </p>
       </TextBox>
       <GoalsSection />
-      <Carousel />
+      <div className="flex flex-col md:flex-row md:max-w-screen-lg justify-center gap-12">
+        <Carousel />
+        <div className="flex flex-col justify-center gap-3 md:max-w-md">
+          <h3 className="text-primary text-3xl text-center font-extrabold md:text-left md:text-5xl">
+            Descubre más sobre nosotros
+          </h3>
+          <p className="text-primary text-center opacity-70 md:text-left">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis
+            laoreet mattis fermentum aliquam nunc parturient.
+          </p>
+        </div>
+      </div>
+      <div className="flex justify-center w-full my-10 md:my-32">
+        <TextBox>
+          <h1 className="text-center text-white font-bold text-4xl">
+            Cuál es nuestra visión
+          </h1>
+          <p className="text-center text-white text-lg opacity-80">
+            Ser reconocidos como una institución líder y referente en servicios
+            que favorezcan la plena inclusión social de las personas migrantes y
+            refugiadas con discapacidad con la comunidad de acogida, así como en
+            la promoción de acciones que influyan en el cambio social para el
+            cumplimiento de los derechos humanos en las poblaciones
+            desfavorecidas. También ponemos especial atención en la
+            sensibilización local, que propicien el entendimiento sobre las
+            circunstancias que rodean al inmigrante y refugiado a migrar.
+            Apostamos por el trabajo en red ya que la interrelación con otras
+            instituciones permite una mejor consecución de los objetivos
+          </p>
+        </TextBox>
+      </div>
     </div>
   );
 };

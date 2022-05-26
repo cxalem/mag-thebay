@@ -13,8 +13,8 @@ const GoalCard: React.FC<Props> = ({ title, description }) => {
         <Image src={goalPlaceholder} width={54} height={60} alt="Mag-Thebay" />
       </div>
       <div className="md:max-w-xs">
-        <h4 className="font-bold text-md md:text-lg">{title}</h4>
-        <p className="text-md md:text-md">{description}</p>
+        <h4 className="font-bold text-primary text-md md:text-lg">{title}</h4>
+        <p className="text-md text-primary opacity-70 md:text-md">{description}</p>
       </div>
     </div>
   );

@@ -34,8 +34,8 @@ export const Carousel: React.FC<Props> = ({}) => {
   };
 
   return (
-    <div className="w-128 overflow-hidden">
-      <div>
+    <div className="flex flex-col gap-2 items-center justify-center w-128 overflow-hidden">
+      <div className="flex">
         <Image
           src={activeImage.src}
           alt={activeImage.alt}
