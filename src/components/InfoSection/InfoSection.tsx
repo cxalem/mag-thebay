@@ -15,7 +15,7 @@ const InfoSection: React.FC<Props> = ({ children, src, alt }) => {
         height={365}
         alt={alt}
       />
-      <div className="flex flex-col gap-4 items-center md:items-start">
+      <div className="flex flex-col gap-4 items-center mt-4 md:mt-0 md:items-start">
         {children}
       </div>
     </div>

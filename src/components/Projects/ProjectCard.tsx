@@ -15,16 +15,20 @@ const ProjectCard: React.FC<Props> = ({ title, description, url, id }) => {
       <Image
         alt={title}
         src={url}
-        layout="responsive"
+        objectFit="cover"
         width={300}
         height={100}
         className={style.cardHeader}
       />
       <div className="flex flex-col gap-4 px-6 py-10 justify-center">
         <h2 className="text-center font-bold text-primary">{title}</h2>
-        <p className="text-center text-primary text-sm opacity-70">{description}</p>
+        <p className="text-center text-primary text-sm opacity-70">
+          {description}
+        </p>
         <div className="flex justify-center">
-        <Button href={`/${id}`} type="primary">Más Información</Button>
+          <Button href={`/${id}`} type="primary">
+            Más Información
+          </Button>
         </div>
       </div>
     </div>

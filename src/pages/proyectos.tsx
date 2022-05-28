@@ -12,7 +12,7 @@ const Proyectos: NextPage = () => {
     >
       <div>
         <InfoSection src={aboutUsImage} alt="About Us">
-          <h3 className="text-5xl text-center md:text-left font-extrabold text-primary">
+          <h3 className="text-3xl text-center md:text-5xl md:text-left font-extrabold text-primary">
             Proyectos en los que estamos trabajando
           </h3>
           <p className="text-primary text-center md:text-left opacity-70">

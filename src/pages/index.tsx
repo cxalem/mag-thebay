@@ -14,7 +14,7 @@ const Home: NextPage = () => {
     >
       <Hero />
       <InfoSection src={aboutUsImage} alt="Index">
-        <h3 className="text-6xl text-center md:text-left font-extrabold text-primary">
+        <h3 className="text-3xl text-center md:text-4xl lg:text-6xl md:text-left font-extrabold text-primary">
           Quiénes somos y qué hacemos
         </h3>
         <p className="text-primary text-center md:text-left opacity-70">

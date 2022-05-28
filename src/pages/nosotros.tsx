@@ -1,6 +1,6 @@
 import { NextPage } from "next";
-import InfoSection from "../components/InfoSection/InfoSection";
 import styles from "../styles/Home.module.css";
+import InfoSection from "../components/InfoSection/InfoSection";
 import aboutUsImage from "../public/images/about-us.jpg";
 import TextBox from "../components/TextBox/TextBox";
 import GoalsSection from "../components/GoalsSection/GoalSection";
@@ -13,7 +13,7 @@ const Nosotros: NextPage = () => {
     >
       <div>
         <InfoSection src={aboutUsImage} alt="About Us">
-          <h3 className="text-5xl text-center md:text-left font-extrabold text-primary">
+          <h3 className="text-3xl text-center md:text-5xl md:text-left font-extrabold text-primary">
             Qué es Mag-Thebay y qué hacemos
           </h3>
           <p className="text-primary text-center md:text-left opacity-70">
