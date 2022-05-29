@@ -1,0 +1,125 @@
+import postMetadata from "data/postMetadata";
+import { Animation } from "components/Animation";
+import { Logo, Code } from "components/Text";
+import { HomePageLayout } from "components/HomepageLayout";
+import { SocialShare } from "components/SocialShare";
+import { Aside } from "components/Aside";
+import { Image } from "components/Image";
+
+# Architecting performant Web3 apps <SocialShare title="Architecting performant Web3 apps" text="Read about Architecting performant web3 apps at https://www.web3-fullstack.com/blog/web3-architecture-for-performance" />
+
+Performance is a holy grail for Web developers. It means that you can get to your users faster, and that they will be more engaged with your app.
+The web is a platform that is constantly changing, and is constantly evolving.
+
+We have made a lot of progress in the last few years in regard to web performance and architecture.
+From monolithic web apps to microservices, we are now entering an era of proximity and proximity-based architectures.
+
+## What is `proximity-based` architecture?
+
+There are a few concepts that are important to understand when it comes to building applications close to your users.
+
+- `Content Delivery Network`: A CDN is a network of servers that serves content to users. It is typically used to serve static content such as images, CSS, and JavaScript. CDNs are meant to be close to the user, and they are typically located all around the world.
+- `Microservices`: A microservice is a service that is designed to be small and lightweight. It is typically composed of a few components, such as a database or a web app.
+- `Edge computing`: Edge computing is a technology that allows code execution on a server that is close to the user.
+
+<Animation animationPath="network-sharing.json" width={300} height={300} />
+
+Proximity-based architecture is a combination of these three concepts into one. The goal is to deliver static content to users via CDNs and execute microservices on edge computing.
+
+<Aside title="Next.js is a great example of these concepts">
+  Static content is served by a CDN, and microservices are executed on an edge
+  network. The goal is to give a great experience to your users.
+</Aside>
+
+Let's take a look at how this works in the world of Web3 development.
+
+## Decentralized and quick?
+
+Web3 uses a blockchain as a central repository for all data. This means it is the source of truth. One thing to note, however, is that while
+a blockchain is distributed all over the world, it is not as fast as an edge network.
+
+This means that we cannot count on fast response times from the blockchain. This is a feature and not a bug. We are dealing with a distributed system meant to be
+resistant to central ownership.
+
+### If a blockchain is slow, can we make performant Web3 apps?
+
+<Animation animationPath="among-us-asks.json" width={300} height={300} />
+
+There is no definitive answer to this question. There are many factors unique to each project.
+There are some common factors that we can extract and learn lessons from.
+
+To go over those factors, I would like to use my Supabase Hackathon project submission as a reference.
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/Gq0vsADh-X0"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>
+
+In this project, users can buy an NFT and access an exclusive Discord community for NFT owners. The premise on its own is simple. Our users can take the following actions:
+
+    - Buy an NFT.
+    - Access the community Discord.
+
+If you watch the video, you will notice that the blockchain has a loading time that we cannot play around with. The rest, however, is pretty smooth!
+To accomplish this, I supplemented the slowness of the blockchain with a few microservices. Here are a few tips to make your Web3 app performant!
+
+### Tip #1: The blockchain is the source of truth... but you can supplement it!
+
+You should rely on the blockchain to be the single source of truth for your data. However, you can implement your own data layer that mirrors the blockchain!
+This is a great way to make your app performant and will help you avoid slow response times. Here are ways to supplement the blockchain with your own data layer.
+
+- Use an indexing service like <Url href="https://www.covalenthq.com" text="Covalent" /> or <Url href="https://thegraph.com/" text="The Graph" /> to index your data and make it searchable.
+- Make use of non-blocking serverless functions from companies like <Url href="https://vercel.com/" text="Vercel" /> or <Url href="https://supabase.com/" text="Supabase" /> to save data produced in a remote database.
+- Use a service to index blockchain data that your application will need. In my case, I deployed a Node.js server on <Url href="https://fly.io/" text="Fly.io" /> that I paired with a <Url href="https://supabase.com/" text="Supabase" /> edge function.
+
+## Tip #2: Server-side rendering with stateless sessions is great!
+
+When you are architecting your Web3 application, you might be tempted to use client-side rendering,
+since wallets depend on the `window.ethereum`. A low-hanging fruit is to use server-side rendering with stateless sessions!
+
+<Aside title="Stateless sessions respect the ownership of user data and work well with SSR!">
+  By implementing this approach, you can prefetch data from the blockchain and
+  render the page without having your users see a loading screen. See this{" "}
+  <Url
+    href="https://github.com/vercel/examples/tree/main/solutions/web3-sessions"
+    text="Vercel example"
+  />{" "}
+  I built to learn more.
+</Aside>
+
+## Tip #3: Choose your blockchain well and plan your smart contracts ahead of time.
+
+When architecting for speed and performance, you will eventually reach a ceiling. You cannot go faster than the transaction speed of the blockchain you use. For real-time games
+and fast-paced applications, you will need to get creative. I have a few guidelines to help you navigate this crazy space:
+
+- While Ethereum is the dominant blockchain, you can use other blockchains as well. There are really healthy ecosystems of new blockchains.
+- Review your smart contracts and make sure they are well designed. Not every action needs to be a transaction. You can do a lot with view functions and traditional data stores.
+- Use optimistic updates while you wait for the blockchain to confirm your transaction.
+
+## Recap
+
+Architecting for performance is hard. Every project is different. My own experience taught me a lot about this topic. My philosophy can be summarized as follows:
+
+- Supplement the blockchain with your data layer. (Keep in mind that the blockchain is the source of truth!)
+- Prioritize for speed in your rendering methods.
+- Use stateless sessions to prefetch data from the blockchain.
+- Use optimistic updates while you wait for the blockchain to confirm your transaction.
+
+Questions? <Url text="Reach me on Twitter!" href="https://twitter.com/gbibeaul" />
+
+<Animation animationPath="heart.json" width={300} height={300} />
+
+export default ({ children }) => (
+  <HomePageLayout
+    tutorial
+    sidebar
+    {...postMetadata["web3-architecture-for-performance"].en}
+  >
+    {children}
+  </HomePageLayout>
+);
