@@ -3,7 +3,7 @@ import projectsMetadata from "../data/projectsMetadata.json"
 
 export const getProjectsMetadata = async () => {
     try {
-        const projects = await fs.readdir("./src/pages/proyectos")
+        const projects = await fs.readdir("src/pages/proyectos")
         return projects
             .filter((project) => !project.endsWith(".tsx"))
             .filter((project) => projectsMetadata.hasOwnProperty(project))
