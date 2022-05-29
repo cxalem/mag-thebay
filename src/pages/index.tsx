@@ -6,8 +6,13 @@ import ProjectsSection from "../components/Projects/ProjectsSection";
 import JoinUs from "../components/JoinUs/JoinUs";
 import Button from "../components/Button/Button";
 import aboutUsImage from "../public/images/about-us.jpg";
+import { getProjectsMetadata } from "../utils/serverSidePost";
 
-const Home: NextPage = () => {
+type Props = {
+  projectsMetadata: any;
+}
+
+const Home: NextPage<Props> = ({ projectsMetadata }) => {
   return (
     <div
       className={`${styles.container} flex flex-col justify-center items-center`}
@@ -25,10 +30,18 @@ const Home: NextPage = () => {
           ¡Quiero saber más!
         </Button>
       </InfoSection>
-      <ProjectsSection />
+      <ProjectsSection projects={projectsMetadata} />
       <JoinUs />
     </div>
   );
 };
 
 export default Home;
+
+export const getStaticProps = async () => {
+  const projectsMetadata = await getProjectsMetadata();
+  const projectData = projectsMetadata.map((project) => project);
+  return {
+    props: { projectsMetadata: projectData },
+  };
+};

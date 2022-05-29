@@ -3,14 +3,14 @@ import projectsMetadata from "../data/projectsMetadata.json"
 
 export const getProjectsMetadata = async () => {
     try {
-        const projects = await fs.readdir("./src/pages/projects")
+        const projects = await fs.readdir("./src/pages/proyectos")
         return projects
             .filter((project) => !project.endsWith(".tsx"))
             .filter((project) => projectsMetadata.hasOwnProperty(project))
             .map((project) => {
                 return {
                     ...projectsMetadata[project as keyof typeof projectsMetadata],
-                    slug: `/projects/${project}`,
+                    slug: `/proyectos/${project}`,
                 }
             })
     } catch (e) {

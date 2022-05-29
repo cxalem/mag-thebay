@@ -5,16 +5,16 @@ import style from "./ProjectsStyles/ProjectCard.module.css";
 type Props = {
   title: string;
   description: string;
-  url: string;
-  id: string;
+  src: string;
+  slug?: string;
 };
 
-const ProjectCard: React.FC<Props> = ({ title, description, url, id }) => {
+const ProjectCard: React.FC<Props> = ({ title, description, src, slug }) => {
   return (
     <div className="flex flex-col max-w-sm justify-center shadow-xl rounded-2xl">
       <Image
         alt={title}
-        src={url}
+        src={src}
         objectFit="cover"
         width={300}
         height={100}
@@ -26,7 +26,7 @@ const ProjectCard: React.FC<Props> = ({ title, description, url, id }) => {
           {description}
         </p>
         <div className="flex justify-center">
-          <Button href={`/${id}`} type="primary">
+          <Button href={`${slug}`} type="primary">
             Más Información
           </Button>
         </div>
