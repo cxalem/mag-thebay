@@ -38,7 +38,7 @@ const Navbar: React.FC<Props> = ({}) => {
                 <Button href="#" type="secondary">
                   Sé voluntario
                 </Button>
-                <Button href="#" type="primary">
+                <Button href="/contactanos" type="primary">
                   Contáctanos
                 </Button>
               </div>

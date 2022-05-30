@@ -1,1 +1,93 @@
 Creciendo sin límites
+
+# Connecting Metamask to Next.js
+
+When it comes to Web3 applications, the process is often the same: You go to the website and you wait for your Metamask account to be recognized.
+Often you will get a splash screen, reload it a couple of times.
+If you are lucky it might connect quickly but you will still have to wait for data associated with your wallet to be fetched.
+
+In web3 we want users to own their data and this is important. It is something you must keep in mind when building a web3 application or protocol.
+Due to this constraint, Metamask works by injecting an `ethereum` property on the `window` object. This means that applications must wait on the window object before fetching any data related to the connected user.
+
+## The problem with waiting to load data...
+
+Since privacy is a core value of the Web3 space, projects are been hesitant to save data outside of the blockchain.
+However, there is still a benefit to querying data from the blockchain before our application hits the browser. Let's explore how we can respect users' privacy while getting the nice benefits of pre-loading data on the server.
+
+## Wen connect?
+
+### Setting up
+
+
+```
+import { WenProvider } from 'wen-connect';
+
+function MyApp({ Component, pageProps }) {
+  const config = { ssr: true }
+  return (
+    <WenProvider config={config}>
+      <Component {...pageProps} />
+    </WenProvider>
+  )
+}
+```
+
+Here we are passing the `ssr` boolean prop to the context to indicate we want to enable Wen's capacities that make available a Metamask address in `getServerSideProps`.
+After this, we will add the JWT token capacities that Wen relies on. Let's add this code in `pages/api/wen.ts`
+
+```
+export { WenConnect as default } from "wen-connect";
+```
+
+We also have a `WEN_SECRET` environment variable inside our `.env.local` or `.env` file that is used to encrypt the JWT.
+Once this setup is done, we now have full access to connecting our users to Metamask with hooks:
+
+```tsx
+import { useConnect } from "wen-connect";
+
+const { connect, disconnect } = useConnect();
+```
+
+We can also read client-side our user address:
+
+```tsx
+import { useWen, getSession } from "wen-connect";
+
+const component = () => {
+  const { connect, disconnect, wallet } = useWen(props.session);
+
+  return <>{wallet.address}</>;
+};
+```
+
+And even more importantly, we can get access inside `getServerSideProps` to the user's address:
+
+```tsx
+import { useWen, getSession } from "wen-connect";
+
+export default function Demo(props: Props) {
+  const { connect, disconnect, wallet } = useWen(props.session);
+
+  return <>{wallet.address}</>;
+}
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  return {
+    props: {
+      session: getSession(context),
+    },
+  };
+};
+```
+### New patterns for Web3
+
+Those methods are built in the library with one goal in mind: Improve UX and accessibility of applications built on blockchains. Those patterns include:
+
+- delivering content at the edge
+- Making permission-based dashboards
+- protecting member-based routes without having loading screens
+
+## Wrapping up:
+
+
+<br />

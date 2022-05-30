@@ -11,7 +11,6 @@ type Props = {
 };
 
 const Proyectos: NextPage<Props> = ({ projectsMetadata }) => {
-  
 
   return (
     <div
