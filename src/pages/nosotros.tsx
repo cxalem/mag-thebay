@@ -9,7 +9,6 @@ import imgData from "../data/ImagesData.json";
 import { Carousel } from "../components/Carousel/Carousel";
 
 const Nosotros: NextPage = () => {
-  const images = useGetItems(imgData);
 
   return (
     <div
@@ -43,7 +42,7 @@ const Nosotros: NextPage = () => {
       </TextBox>
       <GoalsSection />
       <div className="flex flex-col md:flex-row md:max-w-screen-lg justify-center gap-12">
-        <Carousel images={images} />
+        <Carousel />
         <div className="flex flex-col justify-center gap-3 md:max-w-md">
           <h3 className="text-primary text-3xl text-center font-extrabold md:text-left md:text-5xl">
             Descubre más sobre nosotros

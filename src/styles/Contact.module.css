@@ -1,0 +1,15 @@
+.contactGradient {
+  background: radial-gradient(
+    93.02% 729.3% at 5.13% 18.33%,
+    rgba(0, 108, 189, 0.05) 0%,
+    rgba(0, 108, 189, 0.15) 100%
+  );
+}
+
+.infoBackground {
+  background: radial-gradient(
+    297.35% 58.47% at 50% 50%,
+    rgba(0, 108, 189, 0.75) 0%,
+    #006cbd 100%
+  );
+}

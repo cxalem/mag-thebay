@@ -3,20 +3,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { Disclosure } from "@headlessui/react";
 import Button from "../Button/Button";
-import logo from "../../public/images/logo-magthebay-oscuro.png"
+import logo from "../../public/images/logo-magthebay-oscuro.png";
 
 type Props = {};
 
 const Navbar: React.FC<Props> = ({}) => {
   return (
-    <header className="py-5">
+    <header className="py-5 z-50">
       <Disclosure as="nav">
         {({ open }) => (
           <>
             <div className="hidden md:flex items-center justify-between">
-              <div className="flex gap-8 items-center">
-                <Image src={logo} alt="Mag-Thebay" width="255" height="60" />
-                <ul className="flex gap-5">
+              <div className="flex md:gap-4 lg:gap-8 items-center">
+                <div className="flex md:max-w-56 lg:max-w-64 ">
+                  <Image src={logo} alt="Mag-Thebay" objectFit="cover" width="255" height="60" />
+                </div>
+                <ul className="flex md:gap-2 lg:gap-5">
                   <li>
                     <Link href="/">
                       <a className="text-primary font-semibold">Inicio</a>
@@ -34,7 +36,7 @@ const Navbar: React.FC<Props> = ({}) => {
                   </li>
                 </ul>
               </div>
-              <div className="flex gap-4">
+              <div className="flex md:gap-2 lg:gap-4">
                 <Button href="#" type="secondary">
                   Sé voluntario
                 </Button>
@@ -44,25 +46,25 @@ const Navbar: React.FC<Props> = ({}) => {
               </div>
             </div>
 
-            <div className="flex justify-between md:hidden">
-                <Image src={logo} alt="Mag-Thebay" width="255" height="60" />
+            <div className="flex justify-between md:hidden z-50">
+              <Image src={logo} alt="Mag-Thebay" width="255" height="60" />
               <Disclosure.Button>{!open ? "Menu" : "Cerrar"}</Disclosure.Button>
             </div>
             <Disclosure.Panel className="flex flex-col md:hidden">
               <div className="flex flex-col">
                 <Disclosure.Button>
                   <Link href="/">
-                      <a className="text-primary font-semibold">Inicio</a>
+                    <a className="text-primary font-semibold">Inicio</a>
                   </Link>
                 </Disclosure.Button>
                 <Disclosure.Button>
                   <Link href="/nosotros">
-                      <a className="text-primary font-semibold">Nosotros</a>
+                    <a className="text-primary font-semibold">Nosotros</a>
                   </Link>
                 </Disclosure.Button>
                 <Disclosure.Button>
                   <Link href="/proyectos">
-                      <a className="text-primary font-semibold">Proyectos</a>
+                    <a className="text-primary font-semibold">Proyectos</a>
                   </Link>
                 </Disclosure.Button>
               </div>
