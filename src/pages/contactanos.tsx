@@ -23,7 +23,7 @@ const ContactUs: NextPage = () => {
         </p>
       </div>
 
-      <div className="flex flex-col bg-white rounded-xl mt-56 z-10 shadow-xl pb-5 w-full md:flex-row md:p-5 md:justify-between md:max-w-screen-lg md:gap-9">
+      <div className="flex flex-col bg-white rounded-xl mt-60 z-10 shadow-xl pb-5 w-full md:flex-row md:p-5 md:justify-between md:max-w-screen-lg md:gap-9">
         <div
           className={`${styles.infoBackground} flex flex-col gap-2 py-4 rounded-t-xl md:rounded-xl md:max-w-sm md:px-7 md:gap-10 md:py-20`}
         >
@@ -68,7 +68,7 @@ const ContactUs: NextPage = () => {
                 name="name"
                 id="name"
                 placeholder="Ramón José Martínez"
-                className="border-b-2 h-8 border-blue-650 w-full md:h-10"
+                className="border-b-2 md:border-b-2 h-8 border-blue-650 w-full md:h-10"
               />
             </div>
             <div className="w-full">
@@ -80,7 +80,7 @@ const ContactUs: NextPage = () => {
                 name="email"
                 id="email"
                 placeholder="ramonjose@gmail.com"
-                className="border-b-2 h-8 border-blue-650 w-full md:h-10"
+                className="border-b-2 md:border-b-2 h-8 border-blue-650 w-full md:h-10"
               />
             </div>
           </div>
@@ -91,7 +91,7 @@ const ContactUs: NextPage = () => {
             name="message"
             id="message"
             placeholder="Escribe tu mensaje..."
-            className="border-b-2 h-8 border-blue-650 resize-none h-20"
+            className="border-b-2 md:border-b-2 border-blue-650 resize-none h-20"
           ></textarea>
           <Button type="primary">Enviar mensaje</Button>
         </form>
