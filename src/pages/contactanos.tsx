@@ -7,6 +7,10 @@ import mail from "../public/images/mail.svg";
 import location from "../public/images/location.svg";
 
 const ContactUs: NextPage = () => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  }
+
   return (
     <div
       className={`${styles.container} flex flex-col justify-center items-center`}
@@ -93,7 +97,7 @@ const ContactUs: NextPage = () => {
             placeholder="Escribe tu mensaje..."
             className="border-b-2 md:border-b-2 border-blue-650 resize-none h-20"
           ></textarea>
-          <Button type="primary">Enviar mensaje</Button>
+          <Button onClick={handleSubmit} type="primary">Enviar mensaje</Button>
         </form>
       </div>
     </div>

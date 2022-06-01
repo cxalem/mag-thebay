@@ -1,10 +1,11 @@
 import Link from "next/link";
+import { FormEvent } from "react";
 
 type Props = {
   children: React.ReactNode;
   type: "primary" | "secondary" | "inverted-primary" | "inverted-secondary";
   href?: string;
-  onClick?: () => void;
+  onClick?: any
 };
 
 interface ButtonClassNames {
