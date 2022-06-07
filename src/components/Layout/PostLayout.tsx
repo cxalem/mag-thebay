@@ -1,6 +1,7 @@
 import Navbar from "./Navbar";
 import Head from "next/head";
 import Footer from "./Footer";
+import data from "../../data/projectsMetadata.json"
 
 type Props = {
   description: string;
@@ -8,7 +9,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-const Layout: React.FC<Props> = ({ children, title, description }) => {
+const PostLayout: React.FC<Props> = ({ children, title, description }) => {
   return (
     <div className="h-full">
       <Head>
@@ -19,16 +20,16 @@ const Layout: React.FC<Props> = ({ children, title, description }) => {
 
       <Navbar />
 
-      <main className="">{children}</main>
+      <main className=" max-w-screen-md mx-auto ">{children}</main>
       
       <footer> <Footer /> </footer>
     </div>
   );
 };
 
-Layout.defaultProps = {
+PostLayout.defaultProps = {
   title: "Mag-Thebay",
   description: "Construyendo un mundo sin límites",
 };
 
-export default Layout;
+export default PostLayout;
