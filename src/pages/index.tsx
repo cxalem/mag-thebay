@@ -43,8 +43,7 @@ export default Home;
 
 export const getStaticProps = async () => {
   const projectsMetadata = await getProjectsMetadata();
-  const projectData = projectsMetadata.map((project) => project);
   return {
-    props: { projectsMetadata: projectData },
+    props: { projectsMetadata: projectsMetadata },
   };
 };

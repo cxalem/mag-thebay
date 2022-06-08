@@ -190,6 +190,13 @@
   "resolved" "https://registry.npmjs.org/@types/estree/-/estree-0.0.46.tgz"
   "version" "0.0.46"
 
+"@types/fs-extra@^9.0.13":
+  "integrity" "sha512-nEnwB++1u5lVDM2UI4c1+5R+FYaKfaAzS4OococimjVm3nQw3TuzH5UNsocrcTBbhnerblyHj4A49qXbIiZdpA=="
+  "resolved" "https://registry.npmjs.org/@types/fs-extra/-/fs-extra-9.0.13.tgz"
+  "version" "9.0.13"
+  dependencies:
+    "@types/node" "*"
+
 "@types/hast@^2.0.0":
   "integrity" "sha512-wLEm0QvaoawEDoTRwzTXp4b4jpwiJDvR5KMnFnVodm3scufTlBOWRD6N1OBf9TZMhjlNsSfcO5V+7AF4+Vy+9g=="
   "resolved" "https://registry.npmjs.org/@types/hast/-/hast-2.3.4.tgz"

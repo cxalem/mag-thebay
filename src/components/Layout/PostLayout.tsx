@@ -1,7 +1,8 @@
 import Navbar from "./Navbar";
 import Head from "next/head";
 import Footer from "./Footer";
-import data from "../../data/projectsMetadata.json"
+import data from "../../data/projectsMetadata.json";
+import Image from "next/image";
 
 type Props = {
   description: string;
@@ -11,7 +12,7 @@ type Props = {
 
 const PostLayout: React.FC<Props> = ({ children, title, description }) => {
   return (
-    <div className="h-full">
+    <div className="h-full scroll-smooth">
       <Head>
         <title>{title}</title>
         <meta name="description" content={`${description}`} />
@@ -20,9 +21,27 @@ const PostLayout: React.FC<Props> = ({ children, title, description }) => {
 
       <Navbar />
 
-      <main className=" max-w-screen-md mx-auto ">{children}</main>
-      
-      <footer> <Footer /> </footer>
+      <main className="mx-auto">
+        <Image src="/" alt="Mag-Thebay" width={1200} height={465} />
+        <div className="flex max-w-screen-lg mx-auto">
+          <aside>
+            <div>
+              <h3>índice</h3>
+              <ol>
+                <li><a href="#id">hola</a></li>
+                <li>hola</li>
+                <li>hola</li>
+                <li>hola</li>
+              </ol>
+            </div>
+          </aside>
+          <div>{children}</div>
+        </div>
+      </main>
+
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };

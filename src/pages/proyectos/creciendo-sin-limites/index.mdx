@@ -1,4 +1,14 @@
 import Layout from "../../../components/Layout/PostLayout.tsx";
+import {
+  H1,
+  H2,
+  H3,
+  Text,
+  Url,
+  List,
+  CodeBlock,
+  NumList,
+} from "../../../components/Text/Text";
 
 Performance is a holy grail for Web developers. It means that you can get to your users faster, and that they will be more engaged with your app.
 The web is a platform that is constantly changing, and is constantly evolving.
@@ -60,7 +70,7 @@ and fast-paced applications, you will need to get creative. I have a few guideli
 - Review your smart contracts and make sure they are well designed. Not every action needs to be a transaction. You can do a lot with view functions and traditional data stores.
 - Use optimistic updates while you wait for the blockchain to confirm your transaction.
 
-## Recap
+<H2 id="recap">Recap</H2>
 
 Architecting for performance is hard. Every project is different. My own experience taught me a lot about this topic. My philosophy can be summarized as follows:
 
@@ -69,9 +79,27 @@ Architecting for performance is hard. Every project is different. My own experie
 - Use stateless sessions to prefetch data from the blockchain.
 - Use optimistic updates while you wait for the blockchain to confirm your transaction.
 
-
 export default ({ children }) => (
-  <Layout>
+  const bulletPoints = [
+    {
+      id: "recap",
+      title: "Recap"
+    },
+    {
+      id: "recap2",
+      title: "Recap"
+    },
+    {
+      id: "recap2",
+      title: "Recap"
+    },
+  ]
+  <Layout
+    title="Creciendo sin Límites"
+    description="Un proyecto orientado a los niños emigrantes en el Perú"
+  >
     {children}
   </Layout>
 );
+
+;

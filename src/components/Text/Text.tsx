@@ -16,7 +16,7 @@ export const H2 = (props: any): ReactElement => {
   return (
     <h2
       className="block text-2xl text-center leading-8 font-extrabold tracking-tight text-primary sm:text-4xl"
-      {...props}
+      {...props} id={props.id}
     />
   );
 };
