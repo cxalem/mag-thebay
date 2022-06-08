@@ -79,27 +79,28 @@ Architecting for performance is hard. Every project is different. My own experie
 - Use stateless sessions to prefetch data from the blockchain.
 - Use optimistic updates while you wait for the blockchain to confirm your transaction.
 
-export default ({ children }) => (
+export default ({ children }) => {
   const bulletPoints = [
     {
       id: "recap",
-      title: "Recap"
+      title: "Recap",
     },
     {
       id: "recap2",
-      title: "Recap"
+      title: "Recap",
     },
     {
-      id: "recap2",
-      title: "Recap"
+      id: "recap3",
+      title: "Recap",
     },
-  ]
-  <Layout
-    title="Creciendo sin Límites"
-    description="Un proyecto orientado a los niños emigrantes en el Perú"
-  >
-    {children}
-  </Layout>
-);
-
-;
+  ];
+  return (
+    <Layout
+      title="Creciendo sin Límites"
+      description="Un proyecto orientado a los niños emigrantes en el Perú"
+      bulletPoints={bulletPoints}
+    >
+      {children}
+    </Layout>
+  );
+};

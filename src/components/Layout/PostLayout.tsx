@@ -4,13 +4,24 @@ import Footer from "./Footer";
 import data from "../../data/projectsMetadata.json";
 import Image from "next/image";
 
+type bulletPoint = {
+  title: string;
+  id: string;
+};
+
 type Props = {
   description: string;
   title: string;
   children: React.ReactNode;
+  bulletPoints?: bulletPoint[];
 };
 
-const PostLayout: React.FC<Props> = ({ children, title, description }) => {
+const PostLayout: React.FC<Props> = ({
+  children,
+  title,
+  description,
+  bulletPoints,
+}) => {
   return (
     <div className="h-full scroll-smooth">
       <Head>
@@ -22,20 +33,29 @@ const PostLayout: React.FC<Props> = ({ children, title, description }) => {
       <Navbar />
 
       <main className="mx-auto">
-        <Image src="/" alt="Mag-Thebay" width={1200} height={465} />
-        <div className="flex max-w-screen-lg mx-auto">
-          <aside>
+        <div className=" bg-slate-400 rounded-xl ">
+          <Image
+            src="/"
+            alt="Mag-Thebay"
+            width={1200}
+            height={365}
+            className="rounded-xl"
+          />
+        </div>
+        <div className="flex gap-10 max-w-screen-xl mx-auto mt-10">
+          <aside className="hidden h-fit w-1/2 md:block sticky top-5 bg-slate-200 rounded-xl px-16 py-16">
             <div>
-              <h3>índice</h3>
+              <h3 className="">índice</h3>
               <ol>
-                <li><a href="#id">hola</a></li>
-                <li>hola</li>
-                <li>hola</li>
-                <li>hola</li>
+                {bulletPoints.map((bulletPoint) => (
+                  <a key={bulletPoint.id} href={`#${bulletPoint.id}`}>
+                    <li className="list-decimal">{bulletPoint.title}</li>
+                  </a>
+                ))}
               </ol>
             </div>
           </aside>
-          <div>{children}</div>
+          <div className="w-full">{children}</div>
         </div>
       </main>
 
