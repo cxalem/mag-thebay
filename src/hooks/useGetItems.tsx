@@ -4,7 +4,7 @@ export const useGetItems = (data: DataSlug) => {
     return [
       ...Object.entries(data).map(([id, key]) => {
         return {
-          id,
+          slug: id,
           ...key,
         };
       }),

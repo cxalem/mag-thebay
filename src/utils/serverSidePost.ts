@@ -8,6 +8,7 @@ export const getProjectsMetadata = async () => {
             .filter((project) => !project.endsWith(".tsx"))
             .filter((project) => projectsMetadata.hasOwnProperty(project))
             .map((project) => {
+                console.log(project)
                 return {
                     ...projectsMetadata[project as keyof typeof projectsMetadata],
                     slug: `/proyectos/${project}`,

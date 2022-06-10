@@ -8,6 +8,9 @@ module.exports = {
       colors: {
         "primary": "#282828",
         "blue-650": "#006CBD"
+      },
+      maxWidth: {
+        '40': '160px',
       }
     },
   },

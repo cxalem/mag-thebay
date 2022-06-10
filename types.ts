@@ -16,7 +16,7 @@ export type ImagesData = {
 };
 
 export type Project = {
-  id: string;
+  slug: string;
   title: string;
   description: string;
   src: string;
