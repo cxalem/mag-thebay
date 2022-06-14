@@ -6,7 +6,7 @@ import React from "react";
 export const H1 = (props: any): ReactElement => {
   return (
     <h1
-      className="block text-4xl text-center leading-8 font-extrabold tracking-tight text-primary sm:text-5xl"
+      className="block text-4xl leading-8 font-extrabold tracking-tight text-primary sm:text-5xl"
       {...props}
     />
   );
@@ -15,8 +15,8 @@ export const H1 = (props: any): ReactElement => {
 export const H2 = (props: any): ReactElement => {
   return (
     <h2
-      className="block text-2xl text-center leading-8 font-extrabold tracking-tight text-primary sm:text-4xl"
-      {...props} id={props.id}
+      className="block text-2xl leading-8 font-extrabold tracking-tight text-primary sm:text-4xl"
+      {...props}
     />
   );
 };
@@ -24,7 +24,7 @@ export const H2 = (props: any): ReactElement => {
 export const H3 = (props: any): ReactElement => {
   return (
     <h3
-      className="block text-xl text-center leading-8 font-extrabold tracking-tight text-primary sm:text-3xl"
+      className="block text-xl leading-8 font-extrabold tracking-tight text-primary sm:text-3xl"
       {...props}
     />
   );

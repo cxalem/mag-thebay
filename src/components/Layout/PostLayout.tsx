@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useGetItems } from "../../hooks/useGetItems";
 import ProjectCardSm from "../Projects/ProjectCardSm";
 import type { DataSlug } from "../../../types";
+import { useEffect, useState } from "react";
 
 type bulletPoint = {
   title: string;
@@ -27,6 +28,13 @@ const PostLayout: React.FC<Props> = ({
   bulletPoints,
 }) => {
   const metaData = useGetItems(data);
+  const [path, setPath] = useState<string>("");
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    setPath(path);
+  }, []);
+
   return (
     <div className="h-full scroll-smooth">
       <Head>
@@ -70,15 +78,17 @@ const PostLayout: React.FC<Props> = ({
                 <div className="flex flex-col gap-6 mt-6">
                   {metaData.map((project: any) => {
                     const { title, description, slug, src } = project;
-                    return (
-                      <ProjectCardSm
-                        key={slug}
-                        title={title}
-                        description={description}
-                        src={src}
-                        slug={slug}
-                      />
-                    );
+                    if (!path.endsWith(slug)) {
+                      return (
+                        <ProjectCardSm
+                          key={slug}
+                          title={title}
+                          description={description}
+                          src={src}
+                          slug={slug}
+                        />
+                      );
+                    }
                   })}
                 </div>
               </div>
